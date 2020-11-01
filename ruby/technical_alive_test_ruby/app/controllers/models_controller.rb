@@ -17,7 +17,7 @@ class ModelsController < ApplicationController
     end
   end
 
-def manufacturer
-  params[:manufacturer]
-end
+  def manufacturer
+    params[:manufacturer]
+  end
 end

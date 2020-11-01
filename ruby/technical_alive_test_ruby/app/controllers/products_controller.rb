@@ -17,6 +17,6 @@ class ProductsController < ApplicationController
   end
 
   def permitted_attributes
-    [:manufacturer, :model, :carrier_plan_type]
+    %i[manufacturer model carrier_plan_type]
   end
 end

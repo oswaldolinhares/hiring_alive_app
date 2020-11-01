@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'Product upload' do
+feature 'Product upload', type: :feature do
   before(:each) do
     visit root_path
   end
