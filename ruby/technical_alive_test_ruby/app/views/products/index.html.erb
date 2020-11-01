@@ -6,6 +6,49 @@
 Inventário
 <% end %>
 
+<div class="container" data-controller="product">
+  <div class="columns">
+    <div class="column">
+      <%= form_with url: products_path, method: :get, local: true do |form| %>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded">
+              <%= form.select :manufacturer, options_for_select(manufacturers_to_select),
+                                  { prompt: 'Fabricante...' },
+                                  { data: { action: 'change->product#handleManufacturerSelectChange',
+                                            target: 'product.manufacturer' },
+                                     class: 'input'} %>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control is-expanded">
+              <%= form.select :model, models_to_select, { prompt: 'Modelo...' },{ data: { target: 'product.model' },
+                             class: 'input' } %>
+
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control is-expanded">
+              <%= form.select :carrier_plan_type, options_for_select(carrier_plan_types_to_select),
+                                       { prompt: 'Plano...' }, { data: { target: 'product.carrierPlanType' }, class: 'input'} %>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control is-expanded">
+              <%= form.submit 'Filtrar',  class: 'button is-primary'%>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <div class="columns is-centered">
   <div class="column">
     <table class="table is-bordered is-striped is-narrow is-hoverable">
