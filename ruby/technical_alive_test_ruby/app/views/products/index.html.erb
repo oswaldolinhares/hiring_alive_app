@@ -1,0 +1,35 @@
+<% if flash[:notice] %>
+<div class="notification is-success"><%= flash[:notice] %></div>
+<% end %>
+
+<% content_for :title do %>
+Inventário
+<% end %>
+
+<div class="columns is-centered">
+  <div class="column">
+    <table class="table is-bordered is-striped is-narrow is-hoverable">
+      <tr>
+        <th>Data de inserção</th>
+        <th>Fabricante</th>
+        <th>Modelo</th>
+        <th>Cor</th>
+        <th>Plano</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+      </tr>
+
+      <% @products.each do |product| %>
+      <tr>
+        <td><%= l(product.created_at, format: :short) %></td>
+        <td><%= product.manufacturer %></td>
+        <td><%= product.model %></td>
+        <td><%= product.color %></td>
+        <td><%= product.carrier_plan_type %></td>
+        <td><%= product.quantity %></td>
+        <td><%= number_to_currency(product.price, unit: 'R$ ', separator: ',', delimiter: '') %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
