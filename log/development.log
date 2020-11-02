@@ -1,0 +1,1395 @@
+  [1m[35m (826.8ms)[0m  [1m[35mCREATE DATABASE "technical_alive_test_ruby_development" ENCODING = 'unicode'[0m
+  [1m[35m (828.3ms)[0m  [1m[35mCREATE DATABASE "technical_alive_test_ruby_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2020-11-01 11:24:26 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oswaldolinhares/.asdf/installs/ruby/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oswaldolinhares/.asdf/installs/ruby/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 44.2ms | Allocations: 407)
+Completed 200 OK in 98ms (Views: 67.3ms | ActiveRecord: 0.0ms | Allocations: 2343)
+
+
+  [1m[35m (121.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (158.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5987940684280454130)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20201101152911)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (123.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "manufacturer" character varying, "model" character varying, "color" character varying, "carrier_plan_type" character varying, "quantity" integer, "price" decimal(10,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101152911"]]
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-01 15:31:39.719890"], ["updated_at", "2020-11-01 15:31:39.719890"]]
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5987940684280454130)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."carrier_plan_type" = $1 LIMIT $2[0m  [["carrier_plan_type", 0], ["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("manufacturer", "model", "color", "carrier_plan_type", "quantity", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["manufacturer", "Apple"], ["model", "iPhone 12"], ["color", "white"], ["carrier_plan_type", 0], ["quantity", 10], ["price", "1000.0"], ["created_at", "2020-11-01 15:45:01.040378"], ["updated_at", "2020-11-01 15:45:01.040378"]]
+  [1m[35m (100.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."carrier_plan_type" = $1 LIMIT $2[0m  [["carrier_plan_type", 0], ["LIMIT", 11]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("manufacturer", "model", "color", "carrier_plan_type", "quantity", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["manufacturer", "Apple"], ["model", "iPhone 12"], ["color", "white"], ["carrier_plan_type", 0], ["quantity", 10], ["price", "1000.0"], ["created_at", "2020-11-01 15:48:19.662862"], ["updated_at", "2020-11-01 15:48:19.662862"]]
+  [1m[35m (43.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (1.3ms)[0m  [1m[32mINSERT INTO "products" ("manufacturer", "model", "color", "carrier_plan_type", "quantity", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["manufacturer", "Apple"], ["model", "iPhone 12"], ["color", "white"], ["carrier_plan_type", "pre"], ["quantity", 10], ["price", "1000.0"], ["created_at", "2020-11-01 15:50:45.768730"], ["updated_at", "2020-11-01 15:50:45.768730"]]
+  [1m[35m (56.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Destroy (71.5ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5987940684280454130)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProductUploads (20201101160641)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (146.1ms)[0m  [1m[35mCREATE TABLE "product_uploads" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101160641"]]
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5987940684280454130)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5987940684280454130)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20201101164435)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (198.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (56.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (54.1ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (56.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101164435"]]
+  [1m[35m (27.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5987940684280454130)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5987940684280454130)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProductUploads (20201101165226)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "product_uploads" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5987940684280454130)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (401.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "technical_alive_test_ruby_development"[0m
+  [1m[35m (411.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "technical_alive_test_ruby_test"[0m
+  [1m[35m (894.4ms)[0m  [1m[35mCREATE DATABASE "technical_alive_test_ruby_development" ENCODING = 'unicode'[0m
+  [1m[35m (914.6ms)[0m  [1m[35mCREATE DATABASE "technical_alive_test_ruby_test" ENCODING = 'unicode'[0m
+  [1m[35m (165.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (131.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5987940684280454130)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20201101152911)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (157.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "manufacturer" character varying, "model" character varying, "color" character varying, "carrier_plan_type" character varying, "quantity" integer, "price" decimal(10,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101152911"]]
+  [1m[35m (50.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20201101164435)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (105.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (54.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (107.7ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (57.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101164435"]]
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProductUploads (20201101165226)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (53.9ms)[0m  [1m[35mCREATE TABLE "product_uploads" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101165226"]]
+  [1m[35m (37.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-01 16:53:51.995813"], ["updated_at", "2020-11-01 16:53:51.995813"]]
+  [1m[35m (28.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5987940684280454130)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:17:39 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductUploadsController#new as HTML
+Completed 406 Not Acceptable in 61ms (ActiveRecord: 9.2ms | Allocations: 5033)
+
+
+  
+ActionController::MissingExactTemplate (ProductUploadsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:18:28 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 47.0ms | Allocations: 3504)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /media/oswaldolinhares/46CA6689CA6674D93/dev/jobtest/aliveApp/hiring/ruby/technical_alive_test_ruby/public/packs
+[Webpacker] Hash: a9a11ad8208db5b35eaa
+Version: webpack 4.44.2
+Time: 5844ms
+Built at: 2020-11-01 15:18:40
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bc19f4ae3df6a838a782.js    216 KiB  application  [emitted] [immutable]  application
+js/application-bc19f4ae3df6a838a782.js.map    216 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bc19f4ae3df6a838a782.js js/application-bc19f4ae3df6a838a782.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 195 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/product_upload_controller.js] 3.37 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 773 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 283)
+Completed 200 OK in 11603ms (Views: 11600.2ms | ActiveRecord: 0.0ms | Allocations: 121425)
+
+
+Started POST "/product_uploads" for 127.0.0.1 at 2020-11-01 15:19:05 -0300
+Processing by ProductUploadsController#create as HTML
+  Parameters: {"authenticity_token"=>"6gJeCJAURK6o7//y+NNdF6GocBxl242a6cMfJi0E33NnaQVtbroN2xXdG+lUwJ6MrGPQ5fe/AMx3+QFNIMM3wA==", "product_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1f88a7cf20 @tempfile=#<Tempfile:/tmp/oswaldolinhares/RackMultipart20201101-437078-nsq4ze.csv>, @original_filename="input_invalid.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"product_upload[file]\"; filename=\"input_invalid.csv\"\r\nContent-Type: text/csv\r\n">}, "commit"=>"Upload"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "product_uploads" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-11-01 18:19:05.622768"], ["updated_at", "2020-11-01 18:19:05.622768"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ProductUpload"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "0e9k1ezadyn7fi2ky8shyaax32w1"], ["filename", "input_invalid.csv"], ["content_type", "text/csv"], ["metadata", "{\"identified\":true}"], ["byte_size", 505], ["checksum", "R8wDJUXXWJPOrsiYFJLOzg=="], ["created_at", "2020-11-01 18:19:05.634575"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "file"], ["record_type", "ProductUpload"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-11-01 18:19:05.639504"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Update (1.2ms)[0m  [1m[33mUPDATE "product_uploads" SET "updated_at" = $1 WHERE "product_uploads"."id" = $2[0m  [["updated_at", "2020-11-01 18:19:05.644944"], ["id", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[35m (35.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+[36m  Disk Storage (9.6ms) [0m[32mUploaded file to key: 0e9k1ezadyn7fi2ky8shyaax32w1 (checksum: R8wDJUXXWJPOrsiYFJLOzg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 439bbb2b-b817-4e90-b738-d5bd4bab68ba) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000056107e705168 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/product_uploads/new
+Completed 302 Found in 246ms (ActiveRecord: 49.8ms | Allocations: 49282)
+
+
+Started GET "/product_uploads/new" for 127.0.0.1 at 2020-11-01 15:19:05 -0300
+  [1m[36mActiveStorage::Blob Load (27.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [439bbb2b-b817-4e90-b738-d5bd4bab68ba] Performing ActiveStorage::AnalyzeJob (Job ID: 439bbb2b-b817-4e90-b738-d5bd4bab68ba) from Async(active_storage_analysis) enqueued at 2020-11-01T18:19:05Z with arguments: #<GlobalID:0x00007f1f700733e8 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [439bbb2b-b817-4e90-b738-d5bd4bab68ba]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ProductUploadsController#new as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [439bbb2b-b817-4e90-b738-d5bd4bab68ba]   [1m[36mActiveStorage::Blob Update (1.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 85)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 5309)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [439bbb2b-b817-4e90-b738-d5bd4bab68ba]   [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [439bbb2b-b817-4e90-b738-d5bd4bab68ba] Performed ActiveStorage::AnalyzeJob (Job ID: 439bbb2b-b817-4e90-b738-d5bd4bab68ba) from Async(active_storage_analysis) in 416.03ms
+Started POST "/product_uploads" for 127.0.0.1 at 2020-11-01 15:19:15 -0300
+Processing by ProductUploadsController#create as HTML
+  Parameters: {"authenticity_token"=>"1//mujWz9oamkmAZ0n3fOGm4J3k/HQ8gr6mjq3NFWYdalL3fyx2/8xughAJ+bhyjZHOHgK15gnYxk73AfoKxNA==", "product_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1f9002b4b0 @tempfile=#<Tempfile:/tmp/oswaldolinhares/RackMultipart20201101-437078-hbui7x.csv>, @original_filename="input_valid.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"product_upload[file]\"; filename=\"input_valid.csv\"\r\nContent-Type: text/csv\r\n">}, "commit"=>"Upload"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Create (1.3ms)[0m  [1m[32mINSERT INTO "product_uploads" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-11-01 18:19:15.435954"], ["updated_at", "2020-11-01 18:19:15.435954"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ProductUpload"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "a9ov7xa1q1fa8wv32nv0j52kvz7t"], ["filename", "input_valid.csv"], ["content_type", "text/csv"], ["metadata", "{\"identified\":true}"], ["byte_size", 578], ["checksum", "wiSY/xEZKOjeatoWczSx3A=="], ["created_at", "2020-11-01 18:19:15.453040"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "file"], ["record_type", "ProductUpload"], ["record_id", 2], ["blob_id", 2], ["created_at", "2020-11-01 18:19:15.461942"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Update (0.9ms)[0m  [1m[33mUPDATE "product_uploads" SET "updated_at" = $1 WHERE "product_uploads"."id" = $2[0m  [["updated_at", "2020-11-01 18:19:15.466314"], ["id", 2]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[35m (46.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+[36m  Disk Storage (10.5ms) [0m[32mUploaded file to key: a9ov7xa1q1fa8wv32nv0j52kvz7t (checksum: wiSY/xEZKOjeatoWczSx3A==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: a3f06acc-14ef-4d17-b89b-e207d6e8a59b) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f1f90148488 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/2>>
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a3f06acc-14ef-4d17-b89b-e207d6e8a59b] Performing ActiveStorage::AnalyzeJob (Job ID: a3f06acc-14ef-4d17-b89b-e207d6e8a59b) from Async(active_storage_analysis) enqueued at 2020-11-01T18:19:15Z with arguments: #<GlobalID:0x00007f1f58593778 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a3f06acc-14ef-4d17-b89b-e207d6e8a59b]   [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a3f06acc-14ef-4d17-b89b-e207d6e8a59b]   [1m[36mActiveStorage::Blob Update (1.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a3f06acc-14ef-4d17-b89b-e207d6e8a59b]   [1m[35m (35.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a3f06acc-14ef-4d17-b89b-e207d6e8a59b] Performed ActiveStorage::AnalyzeJob (Job ID: a3f06acc-14ef-4d17-b89b-e207d6e8a59b) from Async(active_storage_analysis) in 57.97ms
+  [1m[36mProduct Create Many (109.6ms)[0m  [1m[32mINSERT INTO "products" ("manufacturer","model","color","carrier_plan_type","quantity","price","created_at","updated_at") VALUES ('Motorola','Moto G5 16GB','Preto','pre',20,1299.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Motorola','Moto G5 16GB','Preto','pos',20,599.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Motorola','Moto G5 16GB','Vermelho','pre',20,1299.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Motorola','Moto G5 16GB','Vermelho','pos',20,599.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Samsung','Galaxy S8 64GB','Arctic Gray','pre',20,4500.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Samsung','Galaxy S8 64GB','Arctic Gray','pos',20,3299.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Samsung','Galaxy S8 64GB','Midnight Black','pre',20,4500.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Samsung','Galaxy S8 64GB','Midnight Black','pos',20,3299.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Apple','iPhone SE 16GB','Space Gray','pre',10,2599.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Apple','iPhone SE 16GB','Space Gray','pre',10,1499.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Apple','iPhone SE 16GB','Rose','pre',5,2599.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335'),('Apple','iPhone SE 16GB','Rose','pre',5,1499.0,'2020-11-01 18:19:15.574335','2020-11-01 18:19:15.574335') RETURNING "id"[0m
+  ↳ app/services/inventory/storage.rb:13:in `save'
+Redirected to http://localhost:3000/products
+Completed 302 Found in 286ms (ActiveRecord: 174.9ms | Allocations: 27085)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 15:19:15 -0300
+Processing by ProductsController#index as HTML
+Completed 406 Not Acceptable in 9ms (ActiveRecord: 0.0ms | Allocations: 1919)
+
+
+  
+ActionController::MissingExactTemplate (ProductsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:20:08 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 606)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 267)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.0ms | Allocations: 5727)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 15:20:10 -0300
+Processing by ProductsController#index as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms | Allocations: 1933)
+
+
+  
+ActionController::MissingExactTemplate (ProductsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:20:14 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 85)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 4172)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:20:16 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 85)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 4132)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 15:20:53 -0300
+Processing by ProductsController#index as HTML
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 0.0ms | Allocations: 1958)
+
+
+  
+ActionController::MissingExactTemplate (ProductsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:20:57 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 267)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 5693)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:20:59 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 85)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 4136)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:21:03 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 85)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 4137)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 15:21:05 -0300
+Processing by ProductsController#index as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 662)
+
+
+  
+ActionController::MissingExactTemplate (ProductsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:21:07 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 85)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 4145)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 15:21:49 -0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  Rendered products/index.html.erb within layouts/application (Duration: 78.3ms | Allocations: 7369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 277)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.4ms | Allocations: 12384)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:22:10 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 88)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.0ms | Allocations: 4998)
+
+
+Started POST "/product_uploads" for 127.0.0.1 at 2020-11-01 15:22:15 -0300
+Processing by ProductUploadsController#create as HTML
+  Parameters: {"authenticity_token"=>"RIl9FymQRFRVAOd+YNFvS7rGSVeZLlpeVPNULe5x7N5P6ioPMi8mlO3J9NCXKUWVQi6HoOQ6+mqHYxEWEybc0A==", "product_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1f90258530 @tempfile=#<Tempfile:/tmp/oswaldolinhares/RackMultipart20201101-437078-3rdry4.csv>, @original_filename="input_valid.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"product_upload[file]\"; filename=\"input_valid.csv\"\r\nContent-Type: text/csv\r\n">}, "commit"=>"Upload"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Create (0.7ms)[0m  [1m[32mINSERT INTO "product_uploads" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-11-01 18:22:15.384691"], ["updated_at", "2020-11-01 18:22:15.384691"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "ProductUpload"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "vy44px1z2hep4iptmmsltefd9hjx"], ["filename", "input_valid.csv"], ["content_type", "text/csv"], ["metadata", "{\"identified\":true}"], ["byte_size", 578], ["checksum", "wiSY/xEZKOjeatoWczSx3A=="], ["created_at", "2020-11-01 18:22:15.400227"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "file"], ["record_type", "ProductUpload"], ["record_id", 3], ["blob_id", 3], ["created_at", "2020-11-01 18:22:15.407362"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Update (0.7ms)[0m  [1m[33mUPDATE "product_uploads" SET "updated_at" = $1 WHERE "product_uploads"."id" = $2[0m  [["updated_at", "2020-11-01 18:22:15.413885"], ["id", 3]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[35m (55.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+[36m  Disk Storage (6.2ms) [0m[32mUploaded file to key: vy44px1z2hep4iptmmsltefd9hjx (checksum: wiSY/xEZKOjeatoWczSx3A==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0e0e441a-9bbe-48da-9fbc-9846018e9e53) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f1f58589728 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/3>>
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0e0e441a-9bbe-48da-9fbc-9846018e9e53] Performing ActiveStorage::AnalyzeJob (Job ID: 0e0e441a-9bbe-48da-9fbc-9846018e9e53) from Async(active_storage_analysis) enqueued at 2020-11-01T18:22:15Z with arguments: #<GlobalID:0x00007f1f900fad78 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0e0e441a-9bbe-48da-9fbc-9846018e9e53]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0e0e441a-9bbe-48da-9fbc-9846018e9e53]   [1m[36mActiveStorage::Blob Update (0.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+  [1m[36mProduct Create Many (27.7ms)[0m  [1m[32mINSERT INTO "products" ("manufacturer","model","color","carrier_plan_type","quantity","price","created_at","updated_at") VALUES ('Motorola','Moto G5 16GB','Preto','pre',20,1299.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Motorola','Moto G5 16GB','Preto','pos',20,599.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Motorola','Moto G5 16GB','Vermelho','pre',20,1299.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Motorola','Moto G5 16GB','Vermelho','pos',20,599.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Samsung','Galaxy S8 64GB','Arctic Gray','pre',20,4500.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Samsung','Galaxy S8 64GB','Arctic Gray','pos',20,3299.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Samsung','Galaxy S8 64GB','Midnight Black','pre',20,4500.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Samsung','Galaxy S8 64GB','Midnight Black','pos',20,3299.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Apple','iPhone SE 16GB','Space Gray','pre',10,2599.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Apple','iPhone SE 16GB','Space Gray','pre',10,1499.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Apple','iPhone SE 16GB','Rose','pre',5,2599.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588'),('Apple','iPhone SE 16GB','Rose','pre',5,1499.0,'2020-11-01 18:22:15.488588','2020-11-01 18:22:15.488588') RETURNING "id"[0m
+  ↳ app/services/inventory/storage.rb:13:in `save'
+Redirected to http://localhost:3000/products
+Completed 302 Found in 147ms (ActiveRecord: 87.0ms | Allocations: 20286)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 15:22:15 -0300
+Processing by ProductsController#index as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0e0e441a-9bbe-48da-9fbc-9846018e9e53]   [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0e0e441a-9bbe-48da-9fbc-9846018e9e53] Performed ActiveStorage::AnalyzeJob (Job ID: 0e0e441a-9bbe-48da-9fbc-9846018e9e53) from Async(active_storage_analysis) in 51.87ms
+  Rendered products/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 5471)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 100)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.6ms | Allocations: 10258)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 15:38:07 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 278)
+Completed 200 OK in 150ms (Views: 104.3ms | ActiveRecord: 6.7ms | Allocations: 12055)
+
+
+Started POST "/product_uploads" for 127.0.0.1 at 2020-11-01 15:54:47 -0300
+Processing by ProductUploadsController#create as HTML
+  Parameters: {"authenticity_token"=>"B5ujnWLVS5U0CL5AT5+WFs8+B+gNAg3YyulcH2Zd2P2K8Pj4nHsC4Ik6WlvjjFWNwvWnEZ9mgI5U00J0a5owTg==", "product_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f75640fee08 @tempfile=#<Tempfile:/tmp/oswaldolinhares/RackMultipart20201101-466924-1uc3jk7.csv>, @original_filename="input_valid.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"product_upload[file]\"; filename=\"input_valid.csv\"\r\nContent-Type: text/csv\r\n">}, "commit"=>"Upload"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Create (2.4ms)[0m  [1m[32mINSERT INTO "product_uploads" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-11-01 18:54:47.997217"], ["updated_at", "2020-11-01 18:54:47.997217"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ProductUpload"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "wlu7s45at1xlieh1jxy1jyephnh3"], ["filename", "input_valid.csv"], ["content_type", "text/csv"], ["metadata", "{\"identified\":true}"], ["byte_size", 578], ["checksum", "wiSY/xEZKOjeatoWczSx3A=="], ["created_at", "2020-11-01 18:54:48.015894"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "file"], ["record_type", "ProductUpload"], ["record_id", 4], ["blob_id", 4], ["created_at", "2020-11-01 18:54:48.018967"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Update (0.3ms)[0m  [1m[33mUPDATE "product_uploads" SET "updated_at" = $1 WHERE "product_uploads"."id" = $2[0m  [["updated_at", "2020-11-01 18:54:48.021795"], ["id", 4]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[35m (51.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+[36m  Disk Storage (6.4ms) [0m[32mUploaded file to key: wlu7s45at1xlieh1jxy1jyephnh3 (checksum: wiSY/xEZKOjeatoWczSx3A==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5d92797c-e5c3-4c0a-a206-0e1de5543c34) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055f2b65562f8 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/4>>
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d92797c-e5c3-4c0a-a206-0e1de5543c34] Performing ActiveStorage::AnalyzeJob (Job ID: 5d92797c-e5c3-4c0a-a206-0e1de5543c34) from Async(active_storage_analysis) enqueued at 2020-11-01T18:54:48Z with arguments: #<GlobalID:0x00007f752004ed80 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/4>>
+  [1m[36mProduct Create Many (293.9ms)[0m  [1m[32mINSERT INTO "products" ("manufacturer","model","color","carrier_plan_type","quantity","price","created_at","updated_at") VALUES ('Motorola','Moto G5 16GB','Preto','pre',20,1299.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Motorola','Moto G5 16GB','Preto','pos',20,599.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Motorola','Moto G5 16GB','Vermelho','pre',20,1299.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Motorola','Moto G5 16GB','Vermelho','pos',20,599.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Samsung','Galaxy S8 64GB','Arctic Gray','pre',20,4500.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Samsung','Galaxy S8 64GB','Arctic Gray','pos',20,3299.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Samsung','Galaxy S8 64GB','Midnight Black','pre',20,4500.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Samsung','Galaxy S8 64GB','Midnight Black','pos',20,3299.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Apple','iPhone SE 16GB','Space Gray','pre',10,2599.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Apple','iPhone SE 16GB','Space Gray','pre',10,1499.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Apple','iPhone SE 16GB','Rose','pre',5,2599.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824'),('Apple','iPhone SE 16GB','Rose','pre',5,1499.0,'2020-11-01 18:54:48.127824','2020-11-01 18:54:48.127824') RETURNING "id"[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d92797c-e5c3-4c0a-a206-0e1de5543c34]   [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/inventory/storage.rb:13:in `save'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d92797c-e5c3-4c0a-a206-0e1de5543c34]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+Redirected to http://localhost:3000/products
+Completed 302 Found in 545ms (ActiveRecord: 366.1ms | Allocations: 258179)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 15:54:48 -0300
+Processing by ProductsController#index as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d92797c-e5c3-4c0a-a206-0e1de5543c34]   [1m[35m (65.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d92797c-e5c3-4c0a-a206-0e1de5543c34] Performed ActiveStorage::AnalyzeJob (Job ID: 5d92797c-e5c3-4c0a-a206-0e1de5543c34) from Async(active_storage_analysis) in 361.26ms
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  Rendered products/index.html.erb within layouts/application (Duration: 32.7ms | Allocations: 9048)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 277)
+Completed 200 OK in 73ms (Views: 67.2ms | ActiveRecord: 0.7ms | Allocations: 15069)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 16:01:16 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 606)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 88)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.0ms | Allocations: 4994)
+
+
+Started POST "/product_uploads" for 127.0.0.1 at 2020-11-01 16:01:25 -0300
+Processing by ProductUploadsController#create as HTML
+  Parameters: {"authenticity_token"=>"dfIQ9NGyxI8GZGXsDSx1/GqgIDaeoX0yu0b+IMgUW4B+kUfsyg2mT76tdkL61F8ikkjuweO13QZo1rsbNUNrjg==", "product_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f75640d69d0 @tempfile=#<Tempfile:/tmp/oswaldolinhares/RackMultipart20201101-466924-6hislz.csv>, @original_filename="input_invalid.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"product_upload[file]\"; filename=\"input_invalid.csv\"\r\nContent-Type: text/csv\r\n">}, "commit"=>"Upload"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Create (1.0ms)[0m  [1m[32mINSERT INTO "product_uploads" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-11-01 19:01:25.223019"], ["updated_at", "2020-11-01 19:01:25.223019"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "ProductUpload"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "cewlb6596jhmxy18ivy51s1j36bg"], ["filename", "input_invalid.csv"], ["content_type", "text/csv"], ["metadata", "{\"identified\":true}"], ["byte_size", 505], ["checksum", "R8wDJUXXWJPOrsiYFJLOzg=="], ["created_at", "2020-11-01 19:01:25.237518"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (3.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "file"], ["record_type", "ProductUpload"], ["record_id", 5], ["blob_id", 5], ["created_at", "2020-11-01 19:01:25.242537"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Update (0.4ms)[0m  [1m[33mUPDATE "product_uploads" SET "updated_at" = $1 WHERE "product_uploads"."id" = $2[0m  [["updated_at", "2020-11-01 19:01:25.252492"], ["id", 5]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[35m (32.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+[36m  Disk Storage (8.0ms) [0m[32mUploaded file to key: cewlb6596jhmxy18ivy51s1j36bg (checksum: R8wDJUXXWJPOrsiYFJLOzg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d3b4339d-4ea2-4801-abd8-d0f4195b1dcc) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f75646f5c08 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/5>>
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d3b4339d-4ea2-4801-abd8-d0f4195b1dcc] Performing ActiveStorage::AnalyzeJob (Job ID: d3b4339d-4ea2-4801-abd8-d0f4195b1dcc) from Async(active_storage_analysis) enqueued at 2020-11-01T19:01:25Z with arguments: #<GlobalID:0x00007f7520bbc258 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d3b4339d-4ea2-4801-abd8-d0f4195b1dcc]   [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d3b4339d-4ea2-4801-abd8-d0f4195b1dcc]   [1m[36mActiveStorage::Blob Update (2.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+Redirected to http://localhost:3000/product_uploads/new
+Completed 302 Found in 132ms (ActiveRecord: 39.7ms | Allocations: 21692)
+
+
+Started GET "/product_uploads/new" for 127.0.0.1 at 2020-11-01 16:01:25 -0300
+Processing by ProductUploadsController#new as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d3b4339d-4ea2-4801-abd8-d0f4195b1dcc]   [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering product_uploads/new.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d3b4339d-4ea2-4801-abd8-d0f4195b1dcc] Performed ActiveStorage::AnalyzeJob (Job ID: d3b4339d-4ea2-4801-abd8-d0f4195b1dcc) from Async(active_storage_analysis) in 41.02ms
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 85)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 5099)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/oswaldolinhares/.asdf/installs/ruby/2.7.0/bin/rake:23)
+Started GET "/" for 127.0.0.1 at 2020-11-01 16:36:10 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1050)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /media/oswaldolinhares/46CA6689CA6674D93/dev/jobtest/aliveApp/hiring/ruby/technical_alive_test_ruby/public/packs
+[Webpacker] Hash: ac3465ec585f571f259b
+Version: webpack 4.44.2
+Time: 3947ms
+Built at: 2020-11-01 16:36:17
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9940dbf4404007de38cf.js    221 KiB  application  [emitted] [immutable]  application
+js/application-9940dbf4404007de38cf.js.map    218 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9940dbf4404007de38cf.js js/application-9940dbf4404007de38cf.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 223 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/product_controller.js] 4.42 KiB {application} [optional] [built]
+[./app/javascript/controllers/product_upload_controller.js] 3.37 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 773 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 281)
+Completed 200 OK in 7393ms (Views: 7360.8ms | ActiveRecord: 3.9ms | Allocations: 13427)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 16:38:09 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."created_at" DESC[0m
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 382.4ms | Allocations: 212446)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 277)
+Completed 200 OK in 503ms (Views: 455.2ms | ActiveRecord: 13.4ms | Allocations: 221866)
+
+
+Started GET "/models.json?manufacturer%20=%20$%20{%20manufacturer%20}" for 127.0.0.1 at 2020-11-01 16:38:16 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer "=>" $ { manufacturer }"}
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/controllers/models_controller.rb:13:in `models'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 874)
+
+
+Started GET "/products?manufacturer=Apple&model=&carrier_plan_type=&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:38:18 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Apple", "model"=>"", "carrier_plan_type"=>"", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Apple"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 6904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 85)
+Completed 200 OK in 67ms (Views: 59.3ms | ActiveRecord: 4.4ms | Allocations: 10839)
+
+
+Started GET "/models.json?manufacturer%20=%20$%20{%20manufacturer%20}" for 127.0.0.1 at 2020-11-01 16:38:25 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer "=>" $ { manufacturer }"}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/controllers/models_controller.rb:13:in `models'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 876)
+
+
+Started GET "/products?manufacturer=Samsung&model=&carrier_plan_type=pos&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:38:32 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Samsung", "model"=>"", "carrier_plan_type"=>"pos", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 AND "products"."carrier_plan_type" = $2 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Samsung"], ["carrier_plan_type", "pos"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 5423)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 85)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 2.3ms | Allocations: 9359)
+
+
+Started GET "/models.json?manufacturer%20=%20$%20{%20manufacturer%20}" for 127.0.0.1 at 2020-11-01 16:38:35 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer "=>" $ { manufacturer }"}
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/controllers/models_controller.rb:13:in `models'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 851)
+
+
+Started GET "/products?manufacturer=Apple&model=Galaxy+S8+64GB&carrier_plan_type=pre&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:38:40 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Apple", "model"=>"Galaxy S8 64GB", "carrier_plan_type"=>"pre", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 AND "products"."model" = $2 AND "products"."carrier_plan_type" = $3 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Apple"], ["model", "Galaxy S8 64GB"], ["carrier_plan_type", "pre"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 4209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 85)
+Completed 200 OK in 47ms (Views: 41.6ms | ActiveRecord: 2.1ms | Allocations: 8140)
+
+
+Started GET "/models.json?manufacturer%20=%20$%20{%20manufacturer%20}" for 127.0.0.1 at 2020-11-01 16:38:45 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer "=>" $ { manufacturer }"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/controllers/models_controller.rb:13:in `models'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 845)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 16:38:55 -0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (12.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."created_at" DESC[0m
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 43.7ms | Allocations: 11396)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 85)
+Completed 200 OK in 92ms (Views: 76.3ms | ActiveRecord: 13.8ms | Allocations: 15208)
+
+
+Started GET "/models.json?manufacturer%20=%20$%20{%20manufacturer%20}" for 127.0.0.1 at 2020-11-01 16:39:03 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer "=>" $ { manufacturer }"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/controllers/models_controller.rb:13:in `models'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 847)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 16:40:41 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."created_at" DESC[0m
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 328.9ms | Allocations: 212360)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /media/oswaldolinhares/46CA6689CA6674D93/dev/jobtest/aliveApp/hiring/ruby/technical_alive_test_ruby/public/packs
+[Webpacker] Hash: 135c164084e939cd8112
+Version: webpack 4.44.2
+Time: 3151ms
+Built at: 2020-11-01 16:40:48
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-ea6c346a18b2eedd5172.js    221 KiB  application  [emitted] [immutable]  application
+js/application-ea6c346a18b2eedd5172.js.map    218 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-ea6c346a18b2eedd5172.js js/application-ea6c346a18b2eedd5172.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 223 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/product_controller.js] 4.42 KiB {application} [optional] [built]
+[./app/javascript/controllers/product_upload_controller.js] 3.37 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 773 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 35 hidden modules
+
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 277)
+Completed 200 OK in 6883ms (Views: 6845.4ms | ActiveRecord: 10.2ms | Allocations: 223133)
+
+
+Started GET "/models.json?manufacturer=Apple" for 127.0.0.1 at 2020-11-01 16:40:52 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Apple"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Apple"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 1196)
+
+
+Started GET "/products?manufacturer=Apple&model=iPhone+SE+16GB&carrier_plan_type=pos&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:41:03 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Apple", "model"=>"iPhone SE 16GB", "carrier_plan_type"=>"pos", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 AND "products"."model" = $2 AND "products"."carrier_plan_type" = $3 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Apple"], ["model", "iPhone SE 16GB"], ["carrier_plan_type", "pos"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 85)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 1.7ms | Allocations: 8178)
+
+
+Started GET "/models.json?manufacturer=Apple" for 127.0.0.1 at 2020-11-01 16:41:07 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Apple"}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Apple"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 916)
+
+
+Started GET "/products?manufacturer=Apple&model=iPhone+SE+16GB&carrier_plan_type=pre&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:41:11 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Apple", "model"=>"iPhone SE 16GB", "carrier_plan_type"=>"pre", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 AND "products"."model" = $2 AND "products"."carrier_plan_type" = $3 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Apple"], ["model", "iPhone SE 16GB"], ["carrier_plan_type", "pre"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 24.4ms | Allocations: 6642)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 85)
+Completed 200 OK in 60ms (Views: 54.6ms | ActiveRecord: 3.0ms | Allocations: 10581)
+
+
+Started GET "/models.json?manufacturer=Samsung" for 127.0.0.1 at 2020-11-01 16:41:19 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Samsung"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Samsung"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 887)
+
+
+Started GET "/models.json?manufacturer=Motorola" for 127.0.0.1 at 2020-11-01 16:41:23 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Motorola"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Motorola"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 891)
+
+
+Started GET "/models.json?manufacturer=Apple" for 127.0.0.1 at 2020-11-01 16:41:27 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Apple"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Apple"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 889)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (432.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "technical_alive_test_ruby_development"[0m
+  [1m[35m (338.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "technical_alive_test_ruby_test"[0m
+  [1m[35m (899.6ms)[0m  [1m[35mCREATE DATABASE "technical_alive_test_ruby_development" ENCODING = 'unicode'[0m
+  [1m[35m (883.6ms)[0m  [1m[35mCREATE DATABASE "technical_alive_test_ruby_test" ENCODING = 'unicode'[0m
+  [1m[35m (143.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (130.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5987940684280454130)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20201101152911)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (99.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "manufacturer" character varying, "model" character varying, "color" character varying, "carrier_plan_type" character varying, "quantity" integer, "price" decimal(10,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101152911"]]
+  [1m[35m (23.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20201101164435)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (103.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (52.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (132.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (92.4ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (95.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101164435"]]
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProductUploads (20201101165226)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCREATE TABLE "product_uploads" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201101165226"]]
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-01 19:44:27.966722"], ["updated_at", "2020-11-01 19:44:27.966722"]]
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5987940684280454130)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-11-01 16:44:45 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 27.0ms | Allocations: 280)
+Completed 200 OK in 191ms (Views: 136.1ms | ActiveRecord: 9.3ms | Allocations: 12086)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 16:44:47 -0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."created_at" DESC[0m
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 4654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 99ms (Views: 80.5ms | ActiveRecord: 6.1ms | Allocations: 10254)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 16:44:49 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 88)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms | Allocations: 4184)
+
+
+Started POST "/product_uploads" for 127.0.0.1 at 2020-11-01 16:45:35 -0300
+Processing by ProductUploadsController#create as HTML
+  Parameters: {"authenticity_token"=>"tQRiCd8n+G6FfEJMdxUh37CIXrGcwcWawI9IY5LBVe++ZzURxJiarj21UeKA7QsBSGCQRuHVZa4THw1Yb5Zl4Q==", "product_upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f562cc41150 @tempfile=#<Tempfile:/tmp/oswaldolinhares/RackMultipart20201101-563308-13irl1r.csv>, @original_filename="teste.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"product_upload[file]\"; filename=\"teste.csv\"\r\nContent-Type: text/csv\r\n">}, "commit"=>"Upload"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Create (1.1ms)[0m  [1m[32mINSERT INTO "product_uploads" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-11-01 19:45:35.462624"], ["updated_at", "2020-11-01 19:45:35.462624"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ProductUpload"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "ztzq1e6utxvh9j8abco2vq6nvsc5"], ["filename", "teste.csv"], ["content_type", "text/csv"], ["metadata", "{\"identified\":true}"], ["byte_size", 785], ["checksum", "qu7iB2y3HprsJiGIVTL6VQ=="], ["created_at", "2020-11-01 19:45:35.478250"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (2.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "file"], ["record_type", "ProductUpload"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-11-01 19:45:35.485944"]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[36mProductUpload Update (1.1ms)[0m  [1m[33mUPDATE "product_uploads" SET "updated_at" = $1 WHERE "product_uploads"."id" = $2[0m  [["updated_at", "2020-11-01 19:45:35.494324"], ["id", 1]]
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_uploads_controller.rb:12:in `create'
+[36m  Disk Storage (8.9ms) [0m[32mUploaded file to key: ztzq1e6utxvh9j8abco2vq6nvsc5 (checksum: qu7iB2y3HprsJiGIVTL6VQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 279ac348-a171-423d-9a91-b043295db152) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f562cf0c0b0 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [279ac348-a171-423d-9a91-b043295db152] Performing ActiveStorage::AnalyzeJob (Job ID: 279ac348-a171-423d-9a91-b043295db152) from Async(active_storage_analysis) enqueued at 2020-11-01T19:45:35Z with arguments: #<GlobalID:0x00005600a736b6d8 @uri=#<URI::GID gid://technical-alive-test-ruby/ActiveStorage::Blob/1>>
+  [1m[36mProduct Create Many (271.7ms)[0m  [1m[32mINSERT INTO "products" ("manufacturer","model","color","carrier_plan_type","quantity","price","created_at","updated_at") VALUES ('Motorola','Moto G5 16GB','Preto','pre',20,1299.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Motorola','Moto G5 16GB','Preto','pos',20,599.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Motorola','Moto G5 16GB','Vermelho','pre',20,1299.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Motorola','Moto G5 16GB','Vermelho','pos',20,599.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Motorola','Moto G2 16GB','Vermelho','pos',20,599.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Motorola','Moto G2 16GB','Vermelho','pre',20,599.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Samsung','Galaxy S8 64GB','Arctic Gray','pre',20,4500.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Samsung','Galaxy S8 64GB','Arctic Gray','pos',20,3299.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Samsung','Galaxy S8 64GB','Midnight Black','pre',20,4500.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Samsung','Galaxy S8 64GB','Midnight Black','pos',20,3299.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Samsung','Galaxy S1 64GB','Midnight Black','pos',20,3299.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Apple','iPhone SE 16GB','Space Gray','pre',10,2599.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Apple','iPhone SE 16GB','Space Gray','pre',10,1499.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Apple','iPhone SE 16GB','Rose','pre',5,2599.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Apple','iPhone SE 16GB','Rose','pre',5,1499.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Apple','iPhone 12 16GB','Rose','pre',5,1499.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700'),('Apple','iPhone 12 64GB','Rose','pre',5,1499.0,'2020-11-01 19:45:35.607700','2020-11-01 19:45:35.607700') RETURNING "id"[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [279ac348-a171-423d-9a91-b043295db152]   [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/inventory/storage.rb:13:in `save'
+Redirected to http://localhost:3000/products
+[ActiveJob] [ActiveStorage::AnalyzeJob] [279ac348-a171-423d-9a91-b043295db152]   [1m[36mActiveStorage::Blob Update (1.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+Completed 302 Found in 590ms (ActiveRecord: 336.4ms | Allocations: 256796)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-11-01 16:45:35 -0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [279ac348-a171-423d-9a91-b043295db152]   [1m[35m (32.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [279ac348-a171-423d-9a91-b043295db152] Performed ActiveStorage::AnalyzeJob (Job ID: 279ac348-a171-423d-9a91-b043295db152) from Async(active_storage_analysis) in 291.71ms
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."created_at" DESC[0m
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 47.8ms | Allocations: 9383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 85)
+Completed 200 OK in 85ms (Views: 78.2ms | ActiveRecord: 4.2ms | Allocations: 13234)
+
+
+Started GET "/models.json?manufacturer=Apple" for 127.0.0.1 at 2020-11-01 16:45:43 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Apple"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Apple"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 920)
+
+
+Started GET "/products?manufacturer=Apple&model=&carrier_plan_type=&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:45:50 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Apple", "model"=>"", "carrier_plan_type"=>"", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Apple"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5489)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 85)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 1.7ms | Allocations: 9406)
+
+
+Started GET "/products?manufacturer=&model=&carrier_plan_type=pos&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:46:04 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"", "model"=>"", "carrier_plan_type"=>"pos", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."carrier_plan_type" = $1 ORDER BY "products"."created_at" DESC[0m  [["carrier_plan_type", "pos"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 5469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 85)
+Completed 200 OK in 82ms (Views: 78.2ms | ActiveRecord: 2.1ms | Allocations: 9382)
+
+
+Started GET "/models.json?manufacturer=Apple" for 127.0.0.1 at 2020-11-01 16:46:12 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Apple"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Apple"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 916)
+
+
+Started GET "/products?manufacturer=Apple&model=&carrier_plan_type=pos&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:46:14 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Apple", "model"=>"", "carrier_plan_type"=>"pos", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 AND "products"."carrier_plan_type" = $2 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Apple"], ["carrier_plan_type", "pos"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 4276)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 85)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 3.3ms | Allocations: 8197)
+
+
+Started GET "/models.json?manufacturer=Motorola" for 127.0.0.1 at 2020-11-01 16:46:19 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Motorola"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Motorola"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 910)
+
+
+Started GET "/products?manufacturer=Motorola&model=&carrier_plan_type=pos&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:46:25 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Motorola", "model"=>"", "carrier_plan_type"=>"pos", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 AND "products"."carrier_plan_type" = $2 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Motorola"], ["carrier_plan_type", "pos"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 4858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 85)
+Completed 200 OK in 58ms (Views: 52.6ms | ActiveRecord: 3.4ms | Allocations: 8786)
+
+
+Started GET "/products?manufacturer=&model=&carrier_plan_type=pre&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:46:34 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"", "model"=>"", "carrier_plan_type"=>"pre", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."carrier_plan_type" = $1 ORDER BY "products"."created_at" DESC[0m  [["carrier_plan_type", "pre"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 6491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 85)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 1.1ms | Allocations: 10412)
+
+
+Started GET "/models.json?manufacturer=Motorola" for 127.0.0.1 at 2020-11-01 16:46:42 -0300
+Processing by ModelsController#index as JSON
+  Parameters: {"manufacturer"=>"Motorola"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products" WHERE "products"."manufacturer" = $1[0m  [["manufacturer", "Motorola"]]
+  ↳ app/controllers/models_controller.rb:16:in `models'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 898)
+
+
+Started GET "/products?manufacturer=Motorola&model=&carrier_plan_type=pre&commit=Filtrar" for 127.0.0.1 at 2020-11-01 16:46:45 -0300
+Processing by ProductsController#index as HTML
+  Parameters: {"manufacturer"=>"Motorola", "model"=>"", "carrier_plan_type"=>"pre", "commit"=>"Filtrar"}
+[31mUnpermitted parameter: :commit[0m
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."manufacturer" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:6:in `manufacturers_to_select'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."model" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:10:in `models_to_select'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "products"."carrier_plan_type" FROM "products"[0m
+  ↳ app/helpers/application_helper.rb:14:in `carrier_plan_types_to_select'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."manufacturer" = $1 AND "products"."carrier_plan_type" = $2 ORDER BY "products"."created_at" DESC[0m  [["manufacturer", "Motorola"], ["carrier_plan_type", "pre"]]
+  ↳ app/views/products/index.html.erb:65
+  Rendered products/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 4872)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 85)
+Completed 200 OK in 72ms (Views: 66.7ms | ActiveRecord: 2.0ms | Allocations: 8792)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-01 17:36:20 -0300
+Processing by ProductUploadsController#new as HTML
+  Rendering product_uploads/new.html.erb within layouts/application
+  Rendered product_uploads/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 418)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 88)
+Completed 200 OK in 50ms (Views: 39.5ms | ActiveRecord: 0.0ms | Allocations: 6813)
+
+
